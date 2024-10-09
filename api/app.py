@@ -1,10 +1,18 @@
 import numpy as np
 from flask import Flask, request, render_template, jsonify
 import joblib
+import os
 
 # Create Flask app
-flask_app = Flask(__name__)
-model = joblib.load(open("trained_model_rf.pkl", "rb"))
+# Get the base directory of the project
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # One level up to project root
+
+# Create Flask app and set the template folder explicitly
+flask_app = Flask(__name__, template_folder=os.path.join(BASE_DIR, 'templates'))
+
+# Load the trained model using the absolute path
+model_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'trained_model_rf.pkl')
+model = joblib.load(open(model_path, "rb"))
 
 # Define feature names
 feature_names = ['LSTAT', 'RM', 'PTRATIO', 'INDUS', 'TAX']

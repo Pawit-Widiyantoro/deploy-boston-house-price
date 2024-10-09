@@ -15,6 +15,11 @@
     "env": {
       "FLASK_ENV": "production",
         "VERCEL_PYTHON_VERSION": "3.11"
-    }
+    },
+    "functions": {
+        "api/**/*.py": {
+          "runtime": "python3.11"
+        }
+      }
   }
   

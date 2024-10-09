@@ -5,7 +5,7 @@
         "src": "/api/app.py", 
         "use": "@vercel/python",
         "config": {
-            "pythonVersion": "3.11"
+          "pythonVersion": "3.11"
         }
       }
     ],
@@ -17,12 +17,12 @@
     ],
     "env": {
       "FLASK_ENV": "production",
-        "VERCEL_PYTHON_VERSION": "3.11"
+      "VERCEL_PYTHON_VERSION": "3.11"
     },
     "functions": {
-        "api/**/*.py": {
-          "runtime": "python3.11"
-        }
+      "api/**/*.py": {
+        "runtime": "python3.11"
       }
+    }
   }
   

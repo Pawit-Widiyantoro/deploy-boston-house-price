@@ -1,0 +1,12 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[packages]
+Flask = "==2.3.2"
+joblib = "==1.3.1"
+numpy = "==1.25.0"  # Adjust this version as necessary
+
+[requires]
+python_version = "3.11"
